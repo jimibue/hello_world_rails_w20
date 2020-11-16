@@ -1,10 +1,11 @@
 <h1>Pages</h1>
 <p>pages here</p>
+<%= link_to 'new page', new_page_path %>
+
 <%# this is my loop % ar non echoing %>
 <% @pages.each do |page| %>
   <h2><%= page.title%></h2>
+  <%= link_to 'Show Page', page_path(page) %>
+  <%# <a href="/pages/id">Show Page</a> %>
 <% end %>
 
-<%# @pages.each do |page|
- # do stuf on page
-end %>
